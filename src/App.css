@@ -1,0 +1,188 @@
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+
+
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+
+  font-size: 32px;
+  font-family: Poppins;
+  text-transform: uppercase;
+}
+
+@font-face {
+  font-family: "Poppinss";
+  src: 
+    local("Poppinss"),
+    url('./assets/fonts/Poppins-Bold.ttf') format('opentype'),
+    url('./assets/fonts/Poppins-BoldItalic.ttf') format('opentype'),
+    url('./assets/fonts/Poppins-ExtraBold.ttf') format('opentype'),
+    url('./assets/fonts/Poppins-ExtraBoldItalic.ttf') format('opentype'),
+    url('./assets/fonts/Poppins-Italic.ttf') format('opentype'),
+    url('./assets/fonts/Poppins-Regular.ttf') format('opentype');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  background: none;
+}
+
+body {
+  background-color: var(--off-white);
+  margin: 0;
+  padding: 0;
+}
+
+/* Form */
+
+.App {
+  width: 50vw;
+  background-color: var(--white);
+  padding: 3vw;
+  margin: 0 auto;
+
+  border-radius: 1rem;
+  border-bottom-right-radius: 4rem;
+}
+
+.appForm {
+  border-bottom: 1px solid var(--light-grey);
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  position: relative;
+}
+
+form p {
+  display: grid;
+  grid-template-rows: 2vh 8vh;
+  margin-right: 2vw;
+}
+
+form label {
+  font-size: .45rem;
+  font-weight: bolder;
+  color: var(--smokey-grey);
+  padding-bottom: 15px;
+  margin-left: 2px;
+
+}
+
+form input {
+  border: .03rem solid var(--light-grey);
+  border-radius: .3em;
+  padding: 15px;
+  padding-left: 20px;
+
+
+  color: var(--smokey-grey);
+  font-weight: bolder;
+  font-size: 2.4vw;
+
+}
+
+input:focus {
+  border: .03rem solid var(--purple);
+  outline: none;
+  color: var(--off-black);
+}
+
+button.butn {
+  position: absolute;
+  color: green;
+  background: url(./assets/images/icon-arrow.svg) no-repeat center;
+  background-color: var(--purple);
+  height: 104px;
+  width: 104px;
+  border-radius: 70px;
+  bottom: -45px;
+  right: 0;
+}
+
+button.butn:hover {
+  background-color: var(--off-black);
+  transition: 0.3s;
+}
+
+
+@media (max-width: 840px) {
+  form label {
+    font-size: 1.5vw;
+  }
+  form p {
+    display: grid;
+    grid-template-rows: 2vh 4vh;
+    margin-right: 2vw;
+  }
+  button.butn {
+    right: 37%;
+    bottom: -40px;
+    height: 10vw;
+    width: 10vw;
+  }
+}
+
+
+/* Form results */
+
+.daysResults, .monthsResults, .yearsResults {
+
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: Poppinss;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 7.7vw;
+  text-align: left;
+  text-transform: lowercase;
+}
+
+.violet {
+  color: var(--purple);
+  font-size: 1.3em;
+  vertical-align: middle;
+}
+
+.result {
+  height: fit-content;
+  line-height: 0.8em;
+  margin-bottom: 0.2em;
+}
+
+.daysResults {
+  margin-top: .8em;
+}
+
+/* Error */
+
+form p p {
+  margin-left: .15em;
+  display: none;
+
+  text-transform: none;
+  font-size: .37em;
+  font-style: italic;
+  color: var(--light-red);
+
+}
+
+.error {
+  color: var(--light-red);
+  display: block;
+  border-color: var(--light-red);
+}
+
+
+
